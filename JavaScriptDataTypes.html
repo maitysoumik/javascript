@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DataTypes</title>
+</head>
+<body>
+    <script>
+        /*
+            2 types of datatypes:
+                1. Primitive Datatype
+                2. Non-primitive Datatype
+
+            1. Primitive datatypes
+                - String
+                - Number
+                - Boolean(true/false)
+                - null
+                - undefined
+                - BigInt(>2^53 to <-2^53)
+                - Symbol
+            
+            2. Non-Primitive Datatype
+                - Object
+        */
+
+        // let x;
+        // console.log(typeof x);
+        // x = undefined;
+
+        //console.log(x); // x is not defined.
+
+        // let car = "";
+        // console.log(typeof car); 
+
+        // let x= null;
+        // console.log(typeof x); // null
+
+        //If a variable is declared without initialization, then the type of that variable becomes 'undefined'
+
+        //Number:
+
+        /*
+        8B[64bits]
+        0-51[52bits] - Value(Mantissa)
+        52-62[11bits] - Exponent
+        63rd bit - Sign
+        */
+
+        //JS Integers are accurate upto 15digits.
+        // let x = 9999999999999999;
+        // console.log(x);
+        // let x = 0.1 + 0.2;
+        // console.log(x);
+
+        
+
+         /*
+         The love hate relation between Numbers and Strings involving + operator:
+
+            - If you add two numbers, result will be a number.
+            - If you add two strings, the result will be a string concatenation.
+            - If you add a number and a string, the result will be a string concatenation.
+            - JS interpreter works left to right. More than 2 variables, it will be resolved from left to right.
+        */
+
+        // let x = "100";
+        // let y = "10";
+        // let div = x/y;
+        // let mul = x*y;
+        // let sub = x-y;
+        // let add = x + y;
+        // console.log(div);
+        // console.log(mul);
+        // console.log(sub);
+        // console.log(add);
+
+        // let x = 5;
+        // let y = 6;
+        // console.log(x + y);
+
+        // let x = '5';
+        // let y = 6;
+        // console.log(x + y);
+
+        // let x = 10;
+        // let y = 20;
+        // let z = "The result is: " + x + y;
+        // console.log(z);
+
+        // let x = 10;
+        // let y = 20;
+        // let z = "30";
+        // let sum = x + y + z;
+        // console.log(sum);
+
+        //- NaN - Not a Number
+
+        // let x = 100 / "apple";
+        // console.log(x); //NaN 
+        // console.log(typeof NaN);
+
+        // let x = NaN;
+        // let y = 10;
+        // let z = x ** y;
+        // console.log(z); // Any mathematical operation with NaN will result to be NaN
+
+
+
+        // let x = NaN;
+        // let y = "10";
+        // let z = x + y;
+        // console.log(z);
+
+        //Infinity
+
+        // let x = 2 / 0;
+        // let y = -2 / 0;
+        // console.log(x, y);
+
+       
+
+
+    </script>
+</body>
+</html>
