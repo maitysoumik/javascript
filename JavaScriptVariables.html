@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // - JS variables can be declared in 4 ways:
+            // - Automatically [not recommended]
+            // - using var
+            // - using let
+            // - using const
+
+            // x=5;
+            // y=6;
+            // console.log(x+y);
+
+        // - When to use var, let and const
+        // 1. Always declare variables
+        // 2. Always use const if the value should not change.
+        // 3. Use let when the value can change and const cannot be used.
+        // 4. Only use var if you MUST supoort old browsers.
+
+       // var, let and const
+
+        // let:
+        // Variables declared with let have Block Scope
+        // Variables declared with let must be declared before use.
+        // Variables declared with let cannot be redeclared in the same scope.
+        // Variables declared with let can be reassigned.
+
+        // var
+        // Variables declared with var have Global Scope
+        // can be used before declaration but the value will be undefined. [more on this Hoisting]
+        // can be redeclared
+        // can be reassigned
+
+        // const
+        // block scope 
+        // assinging value is compulsory during declaration.
+        // cannot be redeclared
+        // cannot be reassigned
+
+        // let x = 5;
+        // if(true)
+        // {
+        //     let x = 10;
+        //     console.log(x);
+        // }
+        // console.log(x);
+
+        // var x = 5;
+        // if(true)
+        // {
+        //     var x = 10;
+        //     console.log(x);
+        // }
+        // console.log(x);
+
+        // console.log(x);
+        // let x = 5;
+
+        // console.log(x); //undefined
+        // var x = 5;
+        // console.log(x);
+
+        // let x = "UPES";
+        // let x = 7;
+        // console.log(x); 
+
+        // let x = "UPES";
+        // x = 7;
+        // console.log(x); 
+
+        // var x = "UPES";
+        // var x = 7;
+        // console.log(x); 
+
+
+        // const x = "UPES";
+        // x=7;
+        // console.log(x); //TypeError: Assignment to constant variable.
+
+        // let y;
+        // y=10;
+
+        // const z;
+        // z=0;
+
+
+
+
+
+        
+
+        //  x=5
+        //  y=6
+        //  console.log(x);
+    </script>
+</body>
+</html>
+
+//ES6 

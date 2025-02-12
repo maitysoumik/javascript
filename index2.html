@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS can change attributes of HTML.</title>
+    <style>
+        #myImage{
+            width: 100px;
+            max-height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="document.getElementById('myImage').src='./assets/on.png'">Turn ON</button>
+    <img id="myImage" src="./assets/off.png" />
+    <button onclick="document.getElementById('myImage').src='./assets/off.png'">Turn OFF</button>
+</body>
+</html>
