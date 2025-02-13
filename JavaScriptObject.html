@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Objects</title>
+</head>
+<body>
+    <h1 id="heading"></h1>
+    <script>
+        /*
+            Array: collection of elements, number indexed.
+            Object: collection of elements, name indexed.
+        */
+       //const asmiDetails = ["Asmi", "Garg", "Female", 21, false];
+       //asmiDetails[1]
+       // Syntax - Use {}, keys, values seperated by :, key:value pairs are seperated by ,.
+        // const asmiDetails = {
+        //     firstName : "Asmi",
+        //     "last-Name" : "Garg",
+        //     "gender" : "female",
+        //     age: 21,
+        //     likesJS: true,
+        //     hobbies: ["reading", "coding", "gaming"],
+        //     obj1: {
+        //         a: 5,
+        //         b: 6
+        //     },
+            
+        // }
+        
+        //asmiDetails.sayHi("JS");
+        //If the key is a single word without blank space, " " are optional.
+        //If the key is a multi word, " " are required.
+
+        //Accessing Object Values using keys:
+        // console.log(asmiDetails.firstName); //Dot operator
+        // console.log(asmiDetails["gender"]); //Bracket operator
+        //Single word key -> Both dot and bracket operator works fine.
+        //Multi word key -> [] is must.
+
+        //Adding new key : value pair
+        // asmiDetails.country = "India" //Dot Operator
+        // asmiDetails["city"] = "Delhi"; //Bracket Operator
+
+        // console.log(asmiDetails);
+
+        //Edit Object values using key:
+
+        // asmiDetails.age = 20;  //Dot Operator
+        // asmiDetails["likesJS"] = false; //Bracket Operator
+
+        //Delete objects
+
+        // delete(asmiDetails.likesJS);
+        // console.log(asmiDetails);
+
+        //console.log(typeof(asmiDetails));
+
+        //Object can hold two sorts of thing:
+        // - Properties of an Object: Those keys which hold values other than function[Number, String, another object, array etc]
+        // - Methods of an Object: Those keys which hold functions as values.
+
+
+        //You can also add methods to your object.
+        // asmiDetails["sayHi"] = function() {
+        //     console.log("Hello, my name is Asmi"); 
+        // }
+        // asmiDetails.sayHi();
+
+
+
+        // let x = ["Java", "cpp", "js"];
+        // document.getElementById('heading').innerText = asmiDetails;
+        // Whenever you try to assign an object to be printed inside the DOM, it malfunctions and displays [object Object]
+        // When we try yo convert an abject to a string using .toString() function we get [object Object] in our console.
+        // let y = "JavaScript"
+        // console.log(asmiDetails.toString());
+
+        //JSON - JavaScript Object Notation
+        // Eg:
+        // {
+        //     firstName: 'Utkarsh',
+        //     lastName : 'Dhasmana',
+        // }
+
+        //There are two very important JSON Methods:
+        //JSON.stringify - Converts Objects to String
+       // JSON.parse - Converts String to Object
+
+        //    const asmiDetails = {
+        //         firstName : "Asmi",
+        //         "last-Name" : "Garg",
+        //         "gender" : "female",
+        //         age: 21,
+        //         likesJS: true,  
+        //     }
+        // console.log(asmiDetails);
+        // console.log(JSON.stringify(asmiDetails));
+        // console.log(asmiDetails.toString());
+        // document.getElementById('heading').innerText = JSON.stringify(asmiDetails);
+
+        // let x = JSON.stringify(asmiDetails);
+        // console.log(x);
+        // let y = JSON.parse( '{"a":5, "b":6}' );
+        // console.log(y);
+
+    </script>
+</body>
+</html>
+
