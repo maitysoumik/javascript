@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Arrays</title>
+</head>
+<body>
+    <script>
+
+        /*
+            - primitive vs reference data types
+            - push(), pop(), unshift(), shift()
+            - for...of & for..in loop
+            - array.length
+            - typeof array
+            - slice and splice
+        */
+    
+        //const arr = [2, 1, 5, 7, 9, "string", null, undefined]; // JS Arrays can hold heterogenous data
+        // let x = 5
+        // let y = x;
+
+        //Reference data types: Whenever we make changes top arr1 or obj1, the same changes are also reflected in arr2 and obj2
+        //Because after equality assingment both the variables point at the same location where the changes are made.
+        // const arr = [2, 1, 5, 7, 9]
+        // const arr2 = arr;
+        // console.log(arr);
+        // arr[2] = 6;
+        // console.log(arr);
+        // console.log(arr2);
+
+        // const obj1 = {
+        //     a: 5,
+        //     b: 6
+        // }
+        // const obj2 = obj1;
+        // obj1.a = 10;
+        // console.log(obj1);
+        // console.log(obj2);
+
+        //push() method adds the new element to the end of the array.
+        //push() method return the new size of the array.
+        //push() method modifies the original array.
+        // const arr = [2, 1, 5, 7, 9]
+        // let x = arr.push(10); 
+        // console.log(arr);
+        // console.log(x);
+
+        //pop() method removes the last element from the array.
+        //pop() method return the popped element.
+        //pop() method modifies the original array.
+        // const arr = [2, 1, 5, 7, 9]
+        // let x = arr.pop();
+        // console.log(arr);
+        // console.log(x);
+
+        //unshift() method add to the beginning of the array.
+        //unshift() method return the new size of the array.
+        //unshift() method modifies the original array.
+        // const arr = [2, 1, 5, 7, 9]
+        // let x = arr.unshift(3);
+        // console.log(arr);
+        // console.log(x);
+
+        //shift() method deletes from the beginning of the array.
+        //shift() method return the removed element.
+        //shift() method modifies the original array.
+        // const arr = [2, 1, 5, 7, 9]
+        // let x = arr.shift();
+        // console.log(arr);
+        // console.log(x);
+
+        //for...of -> Iterate through array elements.
+        
+        // const arr = [2, 1, 5, 7, 9];
+        // for(const item of arr) {
+        //     console.log(item);
+        // }
+        
+        //for...in -> Iterate through array indices.
+        // const arr = [2, 1, 5, 7, 9]
+        // for (const index in arr) {
+        //     console.log(index);
+        // }
+
+        //const arr = [2, 1, 5, 7, 9]
+        // let x = arr.length;
+        // console.log(x);
+        //console.log(typeof arr);
+
+        /*
+        slice()
+         - returns a shallow copy of a portion of an array.
+         - doesnot modify the original array. 
+         - takes two arguments: start(inclusive), end(exclusive).
+         - If end is omitted, it slices till the end of the array.
+        */
+
+        // const arr = [2, 1, 5, 7, 9];
+        // const newArr = arr.slice(1, 4);
+        // console.log(arr);
+        // console.log(newArr);
+
+        /*
+        splice()
+        - Modifies the original array
+        - Takes three arguments:
+                - start index(inclusive)
+                - delete count(no. of elements to remove including element at start)
+                - items to be added(optional: elements to insert)
+        - returns the deleted element array
+        */
+
+        // const arr = [2, 1, 5, 7, 9];
+        // const removed = arr.splice(1, 2)
+        // console.log(arr);
+        // console.log(removed);
+
+        // const arr = [2, 1, 5, 7, 9];
+        // const removed = arr.splice(1, 2, 10, 20, 30, 40);
+        // console.log(arr);
+        // console.log(removed);
+
+        let str = "abc"
+        let str2 = str.slice(1,2);
+        console.log(str2);
+
+        
+    </script>
+</body>
+</html>
