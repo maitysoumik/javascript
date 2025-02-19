@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS ES6 Statements</title>
+</head>
+<body>
+    <script>
+        //ES6 - Ecma Script 6(2015)
+        //ES6 statements are syntactical sugars.
+
+        // 1. Template String
+        // - We define the boundary of a string using backticks(` `); 
+        // - variables can be appended in this manner: ${variableName}
+
+        // const devJindal = {
+        //     firstName: "Dev",
+        //     lastName: 'Jindal'
+        // }
+        // console.log("Hi " + devJindal.firstName + ' ' + devJindal.lastName + '!');
+        // console.log(`Hi ${devJindal.firstName} ${devJindal.lastName}!`)
+
+        // let x = 5
+        // let y = 6
+        // //The summation of 5 and 6 is 11
+        // console.log(`The summation of ${x} and ${y} is ${x+y}`);
+
+        // ----------------------------------------------------------------------------
+
+        // 2. let, const
+
+        // var -> No Scope / Global Scope
+        // let -> Block Scope
+        // const -> Block Scope + constant value
+
+         // ----------------------------------------------------------------------------
+
+        // 3. Arrow Functions
+
+        //  function abc() {
+        //     console.log('abc');
+        //  }
+        //  const abc = function() {
+        //     console.log('abc');
+        //  }
+        // const abc = () => {
+        //     console.log('abc');
+        // } 
+        // abc();
+
+        // If there is only one statement inside our arrow function, we can skip the {}.
+
+        // const abc = () => console.log('abc');
+        // abc();
+
+        /*
+        If there is only one statement inside our arrow function, and that statement is a return
+        satement, we can ignore the return keyword.
+        */
+
+        // const sum = (a,b) =>{
+        //     return a + b
+        // };
+        // const sum = (a,b) => a + b;
+        // console.log(sum(4, 6));
+    </script>
+</body>
+</html>

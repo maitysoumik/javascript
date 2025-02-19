@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Array Methods</title>
+</head>
+<body>
+    <script>
+        // function x() {
+        //     console.log(5);
+        // }
+        // function y(x) {
+        //     x();
+        // }
+        // y(x);    
+      
+        // Function x which becomes a parameter for another function is known as callback function.
+        // Function y which takes a callback function as its parameter is known as Higher Order functions.
+        /*
+            - forEach()
+            - filter()
+            - map()
+        */
+
+        //forEach
+
+        //- Iterates and run the callback for each element.
+        //- It does not return anything.
+        //- Doesnot manipulate the original array.
+        //- Primarily used for performing side effects logging, updating the DOM, or calling other functions.
+        // Syntax:
+        // arrayName.forEach(
+        //     function(param1) {
+        //         //statements
+        //     }
+        // )
+
+        // const arr = [3, 1, 5, 2, 6];
+        // arr.forEach(
+        //     function(element) {
+        //         console.log(element, element*2);
+        //     }
+        // )
+        
+        /*
+        filter()
+        - Iterate and run a callback for each element.
+        - Cannot manipulate the original array.
+        - A condition needs to be returned inside the callback.
+        - Returns a new array with the elements that pass the condition.
+        - Primarily used for filtering data.(or create a subarray out of the main array)
+        - [Size of the returned array need not be same as original array.]
+        */
+
+        // Syntax:
+
+        // arrayName.filer(function(param) {
+        //     return [condition]
+        // })
+
+        const arr = [3, 1, 5, 2, 6];
+        // const filteredArray = arr.filter(
+        //     function(element) {
+        //         return element%2 == 1
+        //     }
+        // )
+        
+        const filteredArray = arr.filter( (element) =>  element%2 == 1);
+        console.log(filteredArray);
+        // console.log(arr);
+
+        /*
+        map()
+        - Iterate and run the callback for each element.
+        - Cannot manipulate the original array.
+        - A new value needs to be returned inside the callback.
+        - Returns a new array with the all the returend updated values.
+        - [Size of the returned array should be equal to the original array.]
+        - Primarily used for transforming data.
+        */
+        // const arr = [3, 1, 5, 2, 6]
+        // const squaredArray = arr.map(function(element){
+        //     return element ** 2
+        // })
+        // console.log(squaredArray);
+        // console.log(arr);
+
+        /*
+            For the callback function used in forEach, map() and filer()
+            - First Parameter: Refers to the current element being processed.
+            - Second Parameter: Referes to the index of the current element.
+            - Third Parameter: Refers to the entire original array.
+
+            - All the 3 parameters are optional. JS will not throw an error if ommited.
+            - It doesmot make sense to omit the 1st parameter as in every iteration you wont get the current elements.
+        */
+
+        // const arr = [1,2,3]
+        // const newArr = arr.map(function(){
+        //     return 46;
+        // })
+        // console.log(newArr);
+
+        //Exercise
+        //1. Log the element, index and the array itself of a particular array.
+        
+        //const arr = [3,1,2,5,6]
+        
+       
+        // arr.forEach(function(element, index, array){
+        //      console.log(element, index, array);
+        // });
+
+        // 3 0 [3,1,2,5,6]
+        // 1 1 [3,1,2,5,6]
+        // 2 2 [3,1,2,5,6]
+        // 5 3 [3,1,2,5,6]
+        // 6 4 [3,1,2,5,6]
+
+       
+ 
+
+    </script>
+</body>
+</html>
