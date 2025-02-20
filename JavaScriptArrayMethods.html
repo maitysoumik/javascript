@@ -10,8 +10,8 @@
         // function x() {
         //     console.log(5);
         // }
-        // function y(x) {
-        //     x();
+        // function y(callback) {
+        //     callback();
         // }
         // y(x);    
       
@@ -79,6 +79,10 @@
         - [Size of the returned array should be equal to the original array.]
         - Primarily used for transforming data.
         */
+       // Syntax:
+       // arrayName.map(function(param) {
+       //     return [updated value];
+       //  }
         // const arr = [3, 1, 5, 2, 6]
         // const squaredArray = arr.map(function(element){
         //     return element ** 2
@@ -87,7 +91,7 @@
         // console.log(arr);
 
         /*
-            For the callback function used in forEach, map() and filer()
+            For the callback function used in forEach(), map() and filer()
             - First Parameter: Refers to the current element being processed.
             - Second Parameter: Referes to the index of the current element.
             - Third Parameter: Refers to the entire original array.
