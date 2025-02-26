@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Function Methods</title>
+</head>
+<body>
+    <script>
+        // Function Methods - call(), apply(), bind()
+
+        /*
+            call():
+            - Invokes the function immeadiately.
+            - The first argument is the 'object to attach' / first argument tells the value of 'this' keyword inside the function.
+            - After that, the remaining arguments are passed sepeartely.
+            - If a function has x parameters, .call() should receive x+1 arguments.
+        */
+    //    let sagarDetails = {
+    //     firstName : "Sagar",
+    //     lastName : "Singh"
+    //    }
+    //    let nityaDetails = {
+    //     firstName : "Nitya",
+    //     lastName: "Pal"
+    //    }
+    //    function displayFullName(country, num1, num2) {
+    //     console.log(this.firstName + ' ' + this.lastName + ' is from ' + country);
+    //    }
+    //    displayFullName.call(nityaDetails, "India", 5, 6);
+
+    /*
+        .apply():
+        - Invokes the function immediately.
+        - The first argument is the 'object to attach' / first argument tells the value of this keyword inside the function.
+        - The second argument is an array of arguments to be passed to the function.
+        - If a function has x parameters, .apply() should receive exactly 2 parametrs.
+    */
+    //displayFullName.apply(sagarDetails, ["India", 5, 6]);
+    /*
+        .bind():
+        - Does NOT invoke the function immediately.
+        - Returns a new function with (object/this) attached to it.
+        - Single argument: Object to attach/ value of this.
+    */
+    // const displaySagar = displayFullName.bind(sagarDetails);
+    // console.log(displaySagar);
+    // displaySagar("India", 4, 5);
+
+    // To clarify the attachment of this keyword, let us see an example:
+
+    let sagarDetails = {
+        firstName : "Sagar",
+        lastName : "Singh",
+        about: function() {
+            console.log(`${this.firstName} ${this.lastName}`);
+        }
+
+    }
+    let nityaDetails = {
+        firstName : "Nitya",
+        lastName: "Pal"
+    }
+
+    sagarDetails.about.call(nityaDetails);
+    </script>
+</body>
+</html>

@@ -1,283 +1,299 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JS ES6 Statements</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
-        //ES6 - Ecma Script 6(2015)
-        //ES6 statements are syntactical sugars.
+      //ES6 - Ecma Script 6(2015)
+      //ES6 statements are syntactical sugars.
 
-        // 1. Template String
-        // - We define the boundary of a string using backticks(` `); 
-        // - variables can be appended in this manner: ${variableName}
+      // 1. Template String
+      // - We define the boundary of a string using backticks(` `);
+      // - variables can be appended in this manner: ${variableName}
 
-        // const devJindal = {
-        //     firstName: "Dev",
-        //     lastName: 'Jindal'
-        // }
-        // console.log("Hi " + devJindal.firstName + ' ' + devJindal.lastName + '!');
-        // console.log(`Hi ${devJindal.firstName} ${devJindal.lastName}!`)
+      // const devJindal = {
+      //     firstName: "Dev",
+      //     lastName: 'Jindal'
+      // }
+      // console.log("Hi " + devJindal.firstName + ' ' + devJindal.lastName + '!');
+      // console.log(`Hi ${devJindal.firstName} ${devJindal.lastName}!`)
 
-        // let x = 5
-        // let y = 6
-        // //The summation of 5 and 6 is 11
-        // console.log(`The summation of ${x} and ${y} is ${x+y}`);
+      // let x = 5
+      // let y = 6
+      // //The summation of 5 and 6 is 11
+      // console.log(`The summation of ${x} and ${y} is ${x+y}`);
 
-        // ----------------------------------------------------------------------------
+      // ----------------------------------------------------------------------------
 
-        // 2. let, const
+      // 2. let, const
 
-        // var -> No Scope / Global Scope
-        // let -> Block Scope
-        // const -> Block Scope + constant value
+      // var -> No Scope / Global Scope
+      // let -> Block Scope
+      // const -> Block Scope + constant value
 
-         // ----------------------------------------------------------------------------
+      // ----------------------------------------------------------------------------
 
-        // 3. Arrow Functions
+      // 3. Arrow Functions
 
-        //  function abc() {
-        //     console.log('abc');
-        //  }
-        //  const abc = function() {
-        //     console.log('abc');
-        //  }
-        // const abc = () => {
-        //     console.log('abc');
-        // } 
-        // abc();
+      //  function abc() {
+      //     console.log('abc');
+      //  }
+      //  const abc = function() {
+      //     console.log('abc');
+      //  }
+      // const abc = () => {
+      //     console.log('abc');
+      // }
+      // abc();
 
-        // If there is only one statement inside our arrow function, we can skip the {}.
+      // If there is only one statement inside our arrow function, we can skip the {}.
 
-        // const abc = () => console.log('abc');
-        // abc();
+      // const abc = () => console.log('abc');
+      // abc();
 
-        /*
+      /*
         If there is only one statement inside our arrow function, and that statement is a return
         satement, we can ignore the return keyword.
-        */
+      */
 
-        // const sum = (a,b) =>{
-        //     return a + b
-        // };
-        // const sum = (a,b) => a + b;
-        // console.log(sum(4, 6));
+      // const sum = (a,b) =>{
+      //     return a + b
+      // };
+      // const sum = (a,b) => a + b;
+      // console.log(sum(4, 6));
 
-        // ----------------------------------------------------------------------------
+      //If there is only one parameter, we can ignore the ()
+      // const fun = name => name;
+      // console.log(fun("UPES"));
 
-        // 4. Default Parameters
 
-        // const addNumbers = (a=0, b=0, c=0) => console.log(a+b+c);
-        // addNumbers(5, 6, 7);
-        // addNumbers(10, 5);
+      // ----------------------------------------------------------------------------
 
-        // ----------------------------------------------------------------------------
-
-        //5. Exponential Operator
-
-        // console.log(Math.pow(2, 3));
-        // console.log(2 ** 3);
-
-        // ----------------------------------------------------------------------------
-
-        // 6. includes() - Strings, Arrays (returns a boolean checking if substring is present)
-
-        // let str = "Dev Jindal"
-        // console.log(str.includes("int"));
-        // console.log(str.includes("ind"));
-
-        // ----------------------------------------------------------------------------
-
-        //7. Spread Operator (...)
-        // Populates array elements / object entries.
-
-        //  let arr1 = [1, 2, 3];
-        //  let arr2 = [4, 5, 6];
-         
-
-        //Add all the elememts of arr1 and arr2 in newArray
-        //let newArr = [];
-        // for (let i = 0; i < arr1.length; i++) {
-        //     newArr.push(arr1[i]);
-        // }
-        // for (let i = 0; i < arr2.length; i++) {
-        //     newArr.push(arr2[i]);
-        // }
-        // console.log(newArr);
-
-        // const newArr = arr1.concat(arr2);
-        // console.log(newArr);
+      // 4. 
+      // a)Default Parameters
         
-        // const newArr = [...arr1, ...arr2, 9, 10];
-        // console.log(newArr);
+      // const addNumbers = (a=0, b=0, c=0) => console.log(a+b+c);
+      // addNumbers(5, 6, 7);
+      // addNumbers(10, 5);
 
-        // const obj1 = {
-        //     a: 5,
-        //     b: 10
-        // }
-        // const obj2 = {
-        //     c: 15,
-        //     d: 20
-        // }
-        // const obj3 = {
-            
-        // };
+      // b) Rest Parameters(...)
 
-        // for(const key in obj1) {
-        //     obj3[key] = obj1[key];
-        // }
-        // for(const key in obj2) {
-        //     obj3[key] = obj2[key];
-        // }
-        // console.log(obj3);
+      // const add = (a, b, ...params) => {
+      //   //return sum
+      //   let sum = 0;
+      //   params.forEach((element) => {
+      //     sum += element;
+      //   })
+      //   return sum + a + b;
 
-        // obj3['a'] = 56; -> Syntax for adding key value pairs
-        // console.log(obj1[a]) -> Syntax for accessing values through key
-        // const obj3 = {
-        //     ...obj1,
-        //     ...obj2
-        // }
-        // console.log(obj3);
-
-        // ---------------------------------------------------------------------------
-
-        //8. Object Property Assignment
-
-        // let firstName = "Sanjana";
-        // let lastName = "Srivastava";
-
-        // // const sanjanaDetails = {
-        // //     firstName: firstName,
-        // //     lastName: lastName
-        // // }
-        // const sanjanaDetails = {
-        //     firstName, //firstName : firstName
-        //     lastName
-        // }
-        // console.log(sanjanaDetails);
-        
-         // ---------------------------------------------------------------------------
-        //9. Destructuring (Extracting key as variable with the value of that key)
-
-        // const obj1 = {
-        //     a: 5,
-        //     b: 10,
-        //     c: 15,
-        //     d: 20,
-        // }
-        // const {a, d} = obj1;
-        // console.log(a, d); 
-
-        // const arr1 = [1, 10, 15, 20, 25];
-        // const [num1, num2, num3, num4] = arr1;
-        // console.log(num1 + num4);
-
-        // ---------------------------------------------------------------------------
-        // 10. Object.entries() - Returns an array of [arrays with 2 elements] - [key, value] pair
-
-        //[[key1, value1],[key2, value2]...]
-        // const obj1 = {
-        //     a: 5,
-        //     b: 10,
-        //     c: 15,
-        //     d: 20
-        // }
-        // console.log(Object.entries(obj1));
-        
-         // ---------------------------------------------------------------------------
-
-        //  11. Shallow Copy / Deep Copy
-
-        //In order to make a shallow copy we have 2 methods
-        //1. Object.assign()
-        //2. Spread Operator ( {...})
-
-        // const obj1 = {
-        //     a: 5,
-        //     b: 10
-        // }
-        // const obj2 = {...obj1};
-        // obj1.a = 15;
-        // console.log(obj2);
-
-        // const obj2 = Object.assign({c:15, d:20}, obj1);
-        //console.log(obj2);
-
-        // obj1.a = 15;
-        // console.log(obj1);
-        // console.log(obj2);
-
-        // Deep Copy
-
-        // const obj1 = {
-        //     a: 5,
-        //     b: 10,
-        //     c: {
-        //         d: 15,
-        //         e: 20
-        //     }
-        // }
-        // const obj2 = {...obj1};
-        // // obj1.a = 15;
-        // // console.log(obj1);
-        // // console.log(obj2);
-
-        // obj1.c.d = 25;
-        // console.log(obj1);
-        // console.log(obj2);
-
-        // const obj1 = {
-        //     a: 5,
-        //     b: 10,
-        //     c: {
-        //         d: 15,
-        //         e: 20
-        //     }
-        // }
-        // const obj1String = JSON.stringify(obj1);
-        // //console.log(obj1String);
-        // const obj2 = JSON.parse(obj1String);
-        // const obj3 = JSON.parse(JSON.stringify(obj1));
-        // console.log(obj3);
+      // }
+      // const sum = add(1,2,3,4,5,6);
+      // console.log(sum);
 
 
-        // console.log(obj2);
-        // obj1.c.d = 25;
-        // console.log(obj1);
-        // console.log(obj2);
+      // ----------------------------------------------------------------------------
 
-        // Cloning an object and changing only certain required fields
+      //5. Exponential Operator
 
-        // const obj1 = {
-        //     a: 5,
-        //     b: 10,
-        //     c: 15,
-        //     d: 20
-        // }
+      // console.log(Math.pow(2, 3));
+      // console.log(2 ** 3);
 
-        // const obj2 = {
-        //     ...obj1,
-        //     b: 30,
-        // }
+      // ----------------------------------------------------------------------------
 
+      // 6. includes() - Strings, Arrays (returns a boolean checking if substring is present)
 
+      // let str = "Dev Jindal"
+      // console.log(str.includes("int"));
+      // console.log(str.includes("ind"));
 
+      // ----------------------------------------------------------------------------
 
+      //7. Spread Operator (...)
+      // Populates array elements / object entries.
 
+      //  let arr1 = [1, 2, 3];
+      //  let arr2 = [4, 5, 6];
 
+      //Add all the elememts of arr1 and arr2 in newArray
+      //let newArr = [];
+      // for (let i = 0; i < arr1.length; i++) {
+      //     newArr.push(arr1[i]);
+      // }
+      // for (let i = 0; i < arr2.length; i++) {
+      //     newArr.push(arr2[i]);
+      // }
+      // console.log(newArr);
 
+      // const newArr = arr1.concat(arr2);
+      // console.log(newArr);
 
+      // const newArr = [...arr1, ...arr2, 9, 10];
+      // console.log(newArr);
 
+      // const obj1 = {
+      //     a: 5,
+      //     b: 10
+      // }
+      // const obj2 = {
+      //     c: 15,
+      //     d: 20
+      // }
+      // const obj3 = {
 
+      // };
 
+      // for(const key in obj1) {
+      //     obj3[key] = obj1[key];
+      // }
+      // for(const key in obj2) {
+      //     obj3[key] = obj2[key];
+      // }
+      // console.log(obj3);
 
+      // obj3['a'] = 56; -> Syntax for adding key value pairs
+      // console.log(obj1[a]) -> Syntax for accessing values through key
+      // const obj3 = {
+      //     ...obj1,
+      //     ...obj2
+      // }
+      // console.log(obj3);
 
+      // ---------------------------------------------------------------------------
 
+      //8. Object Property Assignment
 
+      let firstName = "Sanjana";
+      let lastName = "Srivastava";
 
+      // const sanjanaDetails = {
+      //     firstName: firstName,
+      //     lastName: lastName
+      // }
+      // const sanjanaDetails = {
+      //     firstName, //firstName : firstName
+      //     lastName,
+      //     country: "India"
+      // }
+      // console.log(sanjanaDetails);
 
+      // ---------------------------------------------------------------------------
+      //9. Destructuring (Extracting key as variable with the value of that key)
+
+      // const obj1 = {
+      //     a: 5,
+      //     b: 10,
+      //     c: 15,
+      //     d: 20,
+      // }
+
+      // const {a, d} = obj1;
+      // console.log(a, d);
+
+      // const arr1 = [1, 10, 15, 20, 25];
+      // const [num1, num2, num3, num4] = arr1;
+      // console.log(num1 + num4);
+
+      // const utkarshDetails = {
+      //   firstName : "Utkarsh",
+      //   lastName : "Dhasmana",
+      //   age: 19
+      // }
+      
+      // const printName = ({firstName, lastName}) => {
+      //   console.log(`${firstName} ${lastName}`);
+      // }
+      // printName(utkarshDetails);
+      // ---------------------------------------------------------------------------
+      // 10. Object.entries() - Returns an array of [arrays with 2 elements] - [key, value] pair
+
+      //[[key1, value1],[key2, value2]...]
+      // const obj1 = {
+      //     a: 5,
+      //     b: 10,
+      //     c: 15,
+      //     d: 20
+      // }
+      // console.log(Object.keys(obj1));
+      // console.log(Object.values(obj1));
+      // console.log(Object.entries(obj1));
+
+      // ---------------------------------------------------------------------------
+
+      //  11. Shallow Copy / Deep Copy
+
+      //In order to make a shallow copy we have 2 methods
+      //1. Object.assign()
+      //2. Spread Operator ( {...})
+
+      // const obj1 = {
+      //     a: 5,
+      //     b: 10
+      // }
+      // const obj2 = {...obj1};
+      // obj1.a = 15;
+      // console.log(obj2);
+
+      // const obj2 = Object.assign({c:15, d:20}, obj1);
+      //console.log(obj2);
+
+      // obj1.a = 15;
+      // console.log(obj1);
+      // console.log(obj2);
+
+      // Deep Copy
+
+      // const obj1 = {
+      //     a: 5,
+      //     b: 10,
+      //     c: {
+      //         d: 15,
+      //         e: 20
+      //     }
+      // }
+      // const obj2 = {...obj1};
+      // obj1.a = 15;
+      // console.log(obj1);
+      // console.log(obj2);
+
+      // obj1.c.d = 25;
+      // console.log(obj1);
+      // console.log(obj2);
+
+      // const obj1 = {
+      //     a: 5,
+      //     b: 10,
+      //     c: {
+      //         d: 15,
+      //         e: 20
+      //     }
+      // }
+      // const obj1String = JSON.stringify(obj1);
+      // //console.log(obj1String);
+      // const obj2 = JSON.parse(obj1String);
+      // const obj3 = JSON.parse(JSON.stringify(obj1));
+      // console.log(obj3);
+
+      // console.log(obj2);
+      // obj1.c.d = 25;
+      // console.log(obj1);
+      // console.log(obj2);
+
+      // Cloning an object and changing only certain required fields
+
+      // const obj1 = {
+      //     a: 5,
+      //     b: 10,
+      //     c: 15,
+      //     d: 20
+      // }
+
+      // const obj2 = {
+      //     ...obj1,
+      //     b: 30,
+      // }
     </script>
-</body>
+  </body>
 </html>
