@@ -1,0 +1,43 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding-top: 50px;
+    background-color: #f0f0f0;
+}
+
+#heading {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+#color {
+    font-size: 1.5rem;
+    margin: 20px 0;
+}
+
+#display {
+    font-weight: bold;
+    color: #338fa4;
+}
+
+button#change {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #338fa4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button#change:hover {
+    background-color: #287185;
+}
+
+span {
+    background-color: #333;
+    padding: 5px;
+}
