@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro to Async JS</title>
+</head>
+<body>
+    <script>
+        // for(let i=0; i<50000; i++) {
+        //     console.log(i);
+        // }
+
+        // console.log(1);
+        // console.log(2);
+        // console.log(3);
+        // console.log(4);
+        // console.log(5);
+        /*
+            Syncronous code runs in sequence. This means that each operation must wait for the previous one to complete before executing.
+
+            Asyncronuous code runs in parallel. This means that an operation can occur while another one is still being processed.
+        */
+
+        //setTimeout() - A specific code needs to be executed after certain time interval.
+        //Syntax:
+        //setTimeout(function(){
+        // }, milliseconds);
+        // console.log(1);
+        // console.log(2);
+        // console.log(3);
+        // setTimeout(()=> {
+        //     console.log(6);
+        // }, 5000);
+        // console.log(4);
+        // console.log(5);
+
+        // console.log(1);
+        // console.log(2);
+        // setTimeout(()=> {
+        //     console.log(7);
+        // }, 2000);
+        // console.log(3);
+        // setTimeout(()=> {
+        //     console.log(6);
+        // }, 0);
+        // console.log(4);
+        // console.log(5);
+
+        // setInterval() => A specific code needs to be executed repetedly after fixed time interval.
+        // Syntax: setInterval(()=>{}, millisecond);
+        // let i = 0;
+        // setInterval(()=>{
+        //     console.log(i);
+        //     i++;
+        // }, 2000)
+        
+        
+    </script>
+</body>
+</html>

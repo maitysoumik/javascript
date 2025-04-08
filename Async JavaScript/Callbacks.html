@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callbacks</title>
+</head>
+<body>
+    <button onclick="orderPlaced(function() {
+        console.log('The order is ready and handed over to the Zomato Delivery Guy.');
+    })">Execute Order</button>
+    <script>
+    // Higher Order Function
+    // - Pass another function as argument.
+    // - Return another function from a function.(closures)
+
+    // let firstFivePrimeNumbers = [];
+    // function fetchRecords(callback) {
+    //     firstFivePrimeNumbers = [2,3,5,7,11];
+    //     callback();
+    // }
+    // function displayRecords() { 
+    //     console.log(firstFivePrimeNumbers);
+    // }
+    // fetchRecords(displayRecords);
+
+    /*
+        Order Placed
+            After 3s -> Chef received the order and started preparing.
+            After 10s -> Pizza Sauce Added.
+            After 5s -> First layer of cheese added.
+            After 12s -> Toppings Added.
+            After 5s -> Second layer of cheese added.
+            After 15s -> Pizza Baked.
+            After 8s -> Oregano Added and Packed.
+            After 2s -> Package received at counter.
+        The order is ready and handed over to the Zomato Delivery Guy.
+    */
+   function orderPlaced(callback) {
+    console.log('Order Placed');
+    setTimeout(() => {
+        console.log('Chef received the order and started preparing.');
+        setTimeout(() => {
+            console.log('Pizza Sauce Added.');
+            setTimeout(() => {
+                console.log('First layer of cheese added.');
+                setTimeout(() => {
+                    console.log('Toppings Added.');
+                    setTimeout(() => {
+                        console.log('Second layer of cheese added.');
+                        setTimeout(() => {
+                            console.log('Pizza Baked.');
+                            setTimeout(() => {
+                                console.log('Oregano Added and Packed.');
+                                setTimeout(()=>{
+                                    console.log('Package received at counter.');
+                                    callback();
+                                }, 2000)
+                            }, 8000)
+                        }, 15000)
+                    }, 5000)
+                }, 12000)
+            }, 5000);
+        }, 10000);
+    }, 3000);
+}
+    
+    
+
+    </script>
+</body>
+</html>

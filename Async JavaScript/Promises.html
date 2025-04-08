@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promises</title>
+</head>
+<body>
+    <script>
+        /*
+        Promises
+
+        - Handles asynchronous code.
+        - Can be used to avoid callback hell scenario(Using promise chaining).
+        - Two Properties: state and result(result only in case of resolve/reject).
+
+        Promises states:
+        1. Pending: Initial state, neither fulfilled nor rejected.
+        2. Resolved(Fulfilled): Successful operation, result is available.
+        3. Rejected
+
+        2 ways:
+        Pending -> Received -> Settled
+        Pending -> Rejected -> Settled
+
+        Syntax:
+        let promise = new Promise((resolve, reject) => {
+
+        })
+        
+        Handle a promise:
+        .then method -> executed when promise is resolved. (Can receive a resolved message)
+        .catch method -> execulted when promise is rejected. (Can receive a rejected message)
+
+        */
+
+        // let n = 4;
+        // let promise1 = new Promise((resolve, reject) => { 
+        //     if (n > 5) { 
+        //         resolve("Number is greater than 5");
+        //     }
+        //     else {
+        //         reject("Number is not greater than 5");
+        //     }
+        // })
+
+       
+        // promise1.then(function(resolvedMessage){
+        //     console.log(resolvedMessage);
+        // }).catch(function(rejectedMessage){
+        //     console.log(rejectedMessage);
+        // })
+        
+        // let promise2 = new Promise((resolve, reject) => {
+        //     reject('Rejected');
+        // })
+
+        // promise2.then(function(okmsg){
+        //     console.log(okmsg)
+        // }
+        // , 
+        // function(notOkMsg){
+        //     console.log("Promise rejected with " + notOkMsg);
+        // }
+        // )
+        //console.log(typeof promise2);
+
+        // promise2.then((successMessage) => {
+        //     console.log(successMessage);
+        // }).catch((failMessage) => {
+        //     console.log(failMessage);
+        // })
+       
+        // Promise Chaining: When you return a value from .then() method - returned value again becomes a promise which needs to be handled by .then() chainng.
+        // When first handler returns another promise which needs to be handled by chaining another .then()
+    
+        const promise1 = () => {
+            return new Promise((resolve, reject) => { 
+                setTimeout( () => {
+                    resolve('A +');
+                },2000)
+            })
+        }
+
+        promise1().then((resolvedMessage)=>{
+            return resolvedMessage + ' B +'
+        }).then((resolvedMessage)=>{
+            return resolvedMessage + ' C'
+        }).then((resolvedMessage)=>{
+            console.log(resolvedMessage);
+        }).catch((rejectedMessage) => {
+            console.log(rejectedMessage);
+        })
+
+
+        
+
+    </script>
+</body>
+</html>
