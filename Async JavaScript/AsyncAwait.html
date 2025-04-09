@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Await</title>
+</head>
+<body>
+    <script>
+        //ASYNC- Attah the keyword to any function to make it asynchrnous/ Handle asynchronus code
+        //AWAIT - Waits for the resolved state of promise (Returns resolved value of promises)
+        // Await should always be used inside async function.
+
+        // let promise = new Promise((resolve, reject) => {
+        //     setTimeout(() => {
+        //         //resolve('Promise resolved');
+        //         reject('Promise rejected');
+        //     }, 4000)
+        // })
+
+        // promise.then((resolvedMessage) => {
+        //     console.log(resolvedMessage);
+        // }).catch((rejectedMessage) => {
+        //     console.log(rejectedMessage);
+        // })
+
+        //EQUIVALENT REPRESENTATION OF HANDLING PROMISE USING ASYNC-AWAIT
+
+        // const handlePromise = async () => {
+        //     try {
+        //         console.log("Promise handling Started");
+        //         const resolvedMessage = await promise;
+        //         console.log("Promise handling Ended");
+        //         console.log(resolvedMessage);
+        //     }
+        //     catch(rejectedMessage) {
+        //         console.log("Error: " + rejectedMessage);
+        //     }
+        // }
+        // handlePromise()
+
+        let fetchDataFromServer = () => new Promise((resolve, reject) => {
+            setTimeout(() => { 
+                resolve('Fetched data successfully');
+            }, 4000)
+        })
+        let processData = () => new Promise((resolve, reject) => {
+            setTimeout(() => { 
+                // resolve('Processed data successfully');
+                reject('Data Processing failed');
+            }, 8000)
+        })
+        const fetchAndProcessData = async function() {
+            try {
+                console.log('Fetching Data Now...');
+                const data = await fetchDataFromServer();
+                console.log(data);
+                const processdData = await processData();
+                console.log(processdData);
+            }
+            catch(err){
+                console.log("Error: " +err);
+            }
+        }
+        fetchAndProcessData();
+    </script>
+</body>
+</html>

@@ -20,12 +20,12 @@
         3. Rejected
 
         2 ways:
-        Pending -> Received -> Settled
+        Pending -> Resolved -> Settled
         Pending -> Rejected -> Settled
 
         Syntax:
         let promise = new Promise((resolve, reject) => {
-
+            
         })
         
         Handle a promise:
@@ -55,6 +55,7 @@
         //     reject('Rejected');
         // })
 
+        // The 2nd argument of .then() can behave like .catch() to resolve rejected promises.
         // promise2.then(function(okmsg){
         //     console.log(okmsg)
         // }
@@ -71,8 +72,10 @@
         //     console.log(failMessage);
         // })
        
-        // Promise Chaining: When you return a value from .then() method - returned value again becomes a promise which needs to be handled by .then() chainng.
+        // Promise Chaining: When you return a value from .then() method - returned value again becomes a promise which needs to be handled by .then() chaining.
         // When first handler returns another promise which needs to be handled by chaining another .then()
+
+        // we can also return a promise from a funtion and then the function becomes a promise.
     
         const promise1 = () => {
             return new Promise((resolve, reject) => { 
