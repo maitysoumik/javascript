@@ -1,0 +1,120 @@
+/* Reset and base styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1d2b64, #f8cdda);
+    background-size: 200% 200%;
+    animation: gradientMove 15s ease infinite;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    min-height: 100vh;
+    text-align: center;
+}
+
+/* Animate the background */
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Timer display */
+.timer {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #fffa;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+    animation: fadeIn 1s ease;
+}
+
+/* Quote display */
+.quote {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px 30px;
+    border-radius: 15px;
+    font-size: 1.3rem;
+    max-width: 800px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1.2s ease;
+}
+
+/* Typing area */
+.typing {
+    width: 100%;
+    max-width: 800px;
+    height: 180px;
+    font-size: 1.1rem;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 15px;
+    resize: none;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(8px);
+    transition: box-shadow 0.3s ease;
+    animation: fadeIn 1.4s ease;
+}
+
+.typing:focus {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+    .quote {
+        font-size: 1.1rem;
+        padding: 15px 20px;
+    }
+
+    .typing {
+        height: 140px;
+        font-size: 1rem;
+    }
+
+    .timer {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .timer {
+        font-size: 2rem;
+    }
+
+    .quote {
+        font-size: 1rem;
+    }
+
+    .typing {
+        font-size: 0.95rem;
+        height: 120px;
+    }
+}
+.correct {
+    color: rgb(18, 62, 18);
+}
+.incorrect {
+    color: #831515;
+    text-decoration: line-through;
+}
